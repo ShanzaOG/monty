@@ -51,3 +51,43 @@ int execute(char **token, stack_t **stack, unsigned int line_num);
 int monty_push(stack_t **stack, char **token, unsigned int line_num);
 int monty_pushq(stack_t **stack, char **token, unsigned int line_num);
 void monty_pall(stack_t **stack, unsigned int line_num);
+
+/* monty_main.c */
+int main(int ac, char **av);
+
+/* monty_free.c */
+void free_stack(stack_t **stack);
+
+/* monty_run.c */
+int monty_run(FILE *fd);
+char **tokening(char *line, char *delim);
+int empty_line(char *line, char *delims);
+
+/* monty_pool1.c */
+void monty_pint(stack_t **stack, unsigned int line_num);
+void monty_pop(stack_t **stack, unsigned int line_num);
+void monty_swap(stack_t **stack, unsigned int line_num);
+void monty_sub(stack_t **stack, unsigned int line_num);
+void monty_add(stack_t **stack, unsigned int line_num);
+
+/* monty_pool2.c */
+void monty_mul(stack_t **stack, unsigned int line_number);
+void monty_div(stack_t **stack, unsigned int line_number);
+void monty_mod(stack_t **stack, unsigned int line_number);
+void monty_pchar(stack_t **stack, unsigned int line_number);
+void monty_pstr(stack_t **stack, unsigned int line_number);
+
+/* monty_pool3.c */
+void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
+
+/*=========================================================================*/
+/*=========================        ERRORS       ===========================*/
+/*=========================================================================*/
+
+/* monty_errors.c */
+int usage_error(int flag);
+int open_error(char *filename);
+int f_errors(int flag, unsigned int line_num);
+
+#endif /* __MONTY_H__ */
